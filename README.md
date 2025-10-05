@@ -1,16 +1,54 @@
-# React + Vite
+# Digital Program Reunion
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a two-page digital program built for the Class of 1975 50th Reunion.  
+It allows attendees to scan a QR code at the event and instantly view the celebration schedule and 1975 nostalgia highlights.
 
-Currently, two official plugins are available:
+## Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Page 1: Evening Schedule (registration, dinner, dancing, closing remarks)
+- Page 2: 1975 Nostalgia (music, movies, prices, and memories)
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React (Vite)
+- TailwindCSS
+- React Router DOM
+- Deployable on Vercel or Netlify
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/YOUR_USERNAME/digital-program-reunion.git
+cd digital-program-reunion
+npm install
+npm run dev
+```
+
+Visit http://localhost:5173
+in your browser.
+
+## Deployment
+
+Push the repo to GitHub.
+
+Deploy using Vercel or Netlify.
+
+Copy the deployed URL (example: https://classof1975.vercel.app
+).
+
+Generate a QR code linking to that URL using https://www.qr-code-generator.com
+.
+
+Print or display the QR code at the event.
+
+📌 **Next step:**  
+Create or replace your existing `README.md` with that text.  
+Then commit and push it up:
+
+```bash
+git add README.md
+git commit -m "docs: add clean project README"
+git push origin main
+```
