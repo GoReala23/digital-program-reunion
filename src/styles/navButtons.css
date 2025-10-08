@@ -1,0 +1,44 @@
+/* ================================================
+   navButtons.css
+   Purpose: Shared navigation buttons for all pages
+   ================================================ */
+
+.nav-button {
+  background-color: #800000;
+  color: #fdf6e3;
+  border: none;
+  border-radius: 30px;
+  font-family: Georgia, serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  padding: 0.7rem 1.8rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  min-width: 180px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button:hover {
+  background-color: #a62b2f;
+  transform: scale(1.05);
+}
+
+.nav-button--active,
+.nav-button:disabled {
+  background-color: #555;
+  color: #fdf6e3;
+  cursor: default;
+  transform: none;
+  opacity: 0.9;
+}
+
+.page-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}

@@ -1,0 +1,121 @@
+/* ================================================
+   EventSchedule.css
+   Purpose: Styles the 1975 Class Reunion program schedule
+   ================================================ */
+
+.eventSchedule {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #fdf6e3, #f7e7c6);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 1rem;
+  font-family: Georgia, serif;
+}
+
+.eventSchedule__wrapper {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid #d3c7a1;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 760px;
+  width: 100%;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+/* 🎓 Banner */
+.eventSchedule__banner {
+  background-color: #800000;
+  color: #ffffff;
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.5rem;
+}
+
+.eventSchedule__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #d4af37;
+  line-height: 1.2;
+}
+
+.eventSchedule__subtitle {
+  font-size: 1.3rem;
+  color: #800000;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.5px;
+}
+
+/* 🙏 Invocation */
+.eventSchedule__section--invocation {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.eventSchedule__sectionTitle {
+  color: #800000;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.eventSchedule__invocationText {
+  font-size: 0.95rem;
+  color: #3d2f1e;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.eventSchedule__divider {
+  width: 80%;
+  height: 1px;
+  background: #d3c7a1;
+  border: none;
+  margin: 1.5rem auto 0;
+}
+
+/* 📅 Schedule Sections */
+.eventSchedule__sections {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 400px;
+  color: #3d2f1e;
+}
+
+.eventSchedule__section {
+  margin-bottom: 2rem;
+}
+
+.eventSchedule__time {
+  color: #800000;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.eventSchedule__list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  line-height: 1.6;
+}
+
+/* 📱 Responsive */
+@media (max-width: 640px) {
+  .eventSchedule__wrapper {
+    padding: 2rem 1.5rem;
+  }
+
+  .eventSchedule__title {
+    font-size: 2rem;
+  }
+}

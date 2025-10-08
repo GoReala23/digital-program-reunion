@@ -1,0 +1,49 @@
+/* ================================================
+   ClosingReflections.css
+   Purpose: Styles for the closing reflections page
+   ================================================ */
+
+.closing-bg {
+  background: linear-gradient(to bottom right, #f4e1b0, #f6e8c1, #f4e1b0);
+  background-attachment: fixed;
+  color: #2b1b0f;
+  font-family: Georgia, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem 6rem; /* Adds breathing space top and bottom */
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 3s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* 🧭 Navigation Section */
+.page-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  margin-bottom: 2rem; /* keeps it comfortably above the bottom edge */
+}
+
+/* 📱 Responsive */
+@media (max-width: 640px) {
+  .closing-bg {
+    padding: 3rem 1rem 5rem;
+  }
+
+  .page-nav {
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}

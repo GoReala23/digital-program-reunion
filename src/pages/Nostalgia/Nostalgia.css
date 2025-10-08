@@ -1,0 +1,312 @@
+/* ================================================
+   Nostalgia.css
+   Purpose: Styles for the 1975 nostalgia page
+   ================================================ */
+
+.nostalgia {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #fdf6e3, #f7e7c6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 3rem 1rem 5rem;
+  font-family: Georgia, serif;
+  color: #3d2f1e;
+}
+
+/* 🔖 Wrapper & Title */
+.nostalgia__wrapper {
+  width: 100%;
+  max-width: 760px;
+  position: relative;
+  z-index: 10;
+}
+
+.nostalgia__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #800000;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.5px;
+}
+
+/* =======================================
+   🪞 Nostalgia Cards
+   ======================================= */
+.nostalgia__card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #d3c7a1;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  margin-bottom: 1.75rem;
+  overflow: hidden;
+}
+
+.nostalgia__card--active {
+  transform: scale(1.04);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+}
+
+.nostalgia__header {
+  width: 100%;
+  text-align: center;
+  background: none;
+  border: none;
+  padding: 2rem 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.nostalgia__header:hover {
+  background-color: #fff6dd;
+}
+
+.nostalgia__sectionTitle {
+  font-size: 1.4rem;
+  color: #d4af37;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+/* 📷 Preview Area */
+.nostalgia__preview {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.nostalgia__previewImg--hero {
+  width: 80%;
+  max-width: 480px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nostalgia__previewImg--hero:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.nostalgia__caption {
+  font-size: 0.9rem;
+  color: #555;
+  font-style: italic;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.nostalgia__arrow {
+  display: inline-block;
+  color: #800000;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.nostalgia__arrow--open {
+  transform: rotate(180deg);
+}
+
+/* =======================================
+   🎞️ Modal Gallery
+   ======================================= */
+.nostalgia__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  z-index: 40;
+}
+
+.nostalgia__focus {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* 🖼️ Modal Box */
+.nostalgia__gallery {
+  background-color: #fff9ef;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  width: 85%;
+  max-width: 540px;
+  max-height: 460px;
+  padding: 1.25rem 1.5rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  overflow: hidden;
+}
+
+/* 🏷️ Modal Text */
+.nostalgia__modalTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #4a2b0f;
+  text-align: center;
+}
+
+.nostalgia__modalNote {
+  font-size: 0.95rem;
+  color: #5b4636;
+  text-align: center;
+  line-height: 1.4;
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+/* 📸 Image Frame */
+.nostalgia__gallery-frame {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fffaf3;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.08);
+}
+
+.nostalgia__gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* =======================================
+   🧭 Navigation Arrows
+   ======================================= */
+.nostalgia__gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  color: #4a2b0f;
+  border: none;
+  width: 44px;
+  height: 44px;
+  font-size: 1.4rem;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.nostalgia__gallery-frame:hover .nostalgia__gallery-arrow {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nostalgia__gallery-arrow--left {
+  left: 12px;
+}
+
+.nostalgia__gallery-arrow--right {
+  right: 12px;
+}
+
+.nostalgia__gallery-arrow:hover {
+  background: #fff;
+}
+
+/* =======================================
+   🧩 Thumbnails
+   ======================================= */
+.nostalgia__gallery-thumbnails {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.nostalgia__gallery-thumbnail {
+  width: 70px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  opacity: 0.75;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nostalgia__gallery-thumbnail:hover,
+.nostalgia__gallery-thumbnail--active {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.nostalgia__gallery-thumbnail--active {
+  border-color: #d4af37;
+}
+
+/* ✖️ Close Button */
+.nostalgia__gallery-close {
+  background: #800000;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.8rem;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.nostalgia__gallery-close:hover {
+  background: #a62b2f;
+}
+
+/* =======================================
+   📱 Responsive Tweaks
+   ======================================= */
+@media (max-width: 640px) {
+  .nostalgia {
+    padding: 2rem 1rem 4rem;
+  }
+
+  .nostalgia__gallery {
+    width: 95%;
+    max-width: 360px;
+    padding: 1rem;
+  }
+
+  .nostalgia__gallery-frame {
+    max-width: 320px;
+    height: 260px;
+  }
+
+  .nostalgia__gallery-thumbnail {
+    width: 60px;
+    height: 45px;
+  }
+
+  .nostalgia__previewImg--hero {
+    width: 90%;
+    max-width: 340px;
+  }
+
+  .nostalgia__title {
+    font-size: 2rem;
+  }
+}
