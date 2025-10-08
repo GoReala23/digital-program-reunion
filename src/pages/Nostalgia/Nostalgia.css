@@ -173,6 +173,7 @@
   width: 100%;
   max-width: 440px;
   height: 320px;
+  aspect-ratio: 4 / 3;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -187,6 +188,7 @@
   height: 100%;
   object-fit: contain;
   border-radius: 12px;
+  background-color: #fffaf3;
 }
 
 /* =======================================
@@ -289,11 +291,12 @@
     width: 95%;
     max-width: 360px;
     padding: 1rem;
+    object-fit: contain;
   }
 
   .nostalgia__gallery-frame {
     max-width: 320px;
-    height: 260px;
+    aspect-ratio: 1/1;
   }
 
   .nostalgia__gallery-thumbnail {
