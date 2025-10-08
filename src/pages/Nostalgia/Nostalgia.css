@@ -174,7 +174,7 @@
   position: relative;
   width: 100%;
   max-width: 440px;
-  min-height: 220px;
+  max-height: 65vh;
   aspect-ratio: 4 / 3;
   display: flex;
   justify-content: center;
