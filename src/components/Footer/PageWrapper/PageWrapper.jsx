@@ -4,8 +4,8 @@
 // Tools: Framer Motion
 // ================================================
 
-import { motion } from 'framer-motion';
 import './PageWrapper.css';
+import { motion } from 'framer-motion';
 
 const fadeVariants = {
   initial: { opacity: 0 },
