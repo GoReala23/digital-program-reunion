@@ -201,7 +201,7 @@ export default function Nostalgia() {
             ← Back to Schedule
           </button>
           <button className='nav-button nav-button--active' disabled>
-            Nostalgia
+            These were the days
           </button>
           <button
             className='nav-button nav-button--closing'
